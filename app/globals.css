@@ -20,12 +20,6 @@
   --desktop-screen: 1024px;
 }
 
-*,
-*::before,
-*::after {
-  /* border: 1px solid red !important; */
-}
-
 body {}
 
 /* Reusable component applies the styles */
@@ -64,14 +58,6 @@ body {}
 
 .RU_makeBold {}
 
-.signalText {
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-align: center;
-  padding: .5rem;
-  background-color: aliceblue;
-}
-
 @media only screen and (min-width: 1024px) {
   /* desktop */
 }
@@ -82,4 +68,28 @@ body {}
 
 @media only screen and (max-width: 500px) {
   /* phone */
+}
+
+
+
+
+
+
+
+
+
+.signalText {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 5rem;
+  padding: .5rem;
+  background-color: aliceblue;
+  text-transform: capitalize;
+}
+
+*,
+*::before,
+*::after {
+  /* border: 1px solid red !important; */
 }
