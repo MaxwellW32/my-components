@@ -2,26 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* import and reuse for all components */
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --giant-text: 4rem;
+  --large-text: 3rem;
+  --big-text: 2rem;
+  --medium-text: 1.5rem;
+  --regular-text: 1rem;
+  --small-text: .7rem;
+
+  --mobile-screen: 500px;
+  --tablet-screen-start: 501px;
+  --tablet-screen-end: 1023px;
+  --desktop-screen: 1024px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*,
+*::before,
+*::after {
+  /* border: 1px solid red !important; */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body {}
+
+/* Reusable component applies the styles */
+/* every component must have class RU on it */
+
+.RU_h1 {
+  font-size: var(--big-text);
+  font-weight: bold;
+}
+
+.RU_h2 {}
+
+.RU_h3 {}
+
+.RU_h4 {}
+
+.RU_h5 {}
+
+
+.RU_giantText {
+  font-size: var(--giant-text);
+  font-weight: bold;
+}
+
+.RU_largeText {
+  font-size: var(--large-text);
+  font-weight: bold;
+}
+
+
+.RU_smallText {}
+
+.RU_svg {
+  aspect-ratio: 1/1;
+  width: var(--regular-size);
+}
+
+.RU_makeBold {}
+
+.signalText {
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: .5rem;
+  background-color: aliceblue;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* desktop */
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1023px) {
+  /* tablet */
+}
+
+@media only screen and (max-width: 500px) {
+  /* phone */
 }
