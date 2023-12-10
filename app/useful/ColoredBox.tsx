@@ -1,13 +1,13 @@
 "use client"
-import { useRef } from 'react'
+import { HTMLAttributes, useRef } from 'react'
 
-export default function ColoredBox() {
+export default function ColoredBox({ number, ...elementProps }: { number?: number } & HTMLAttributes<HTMLDivElement>) {
     const randR = useRef(Math.floor(Math.random() * 256))
     const randG = useRef(Math.floor(Math.random() * 256))
     const randB = useRef(Math.floor(Math.random() * 256))
 
 
     return (
-        <div style={{ height: randR.current > 50 ? "500px" : "", backgroundColor: `rgb(${randR.current}, ${randG.current}, ${randB.current})` }}></div>
+        <div {...elementProps} style={{ backgroundColor: `rgb(${randR.current}, ${randG.current}, ${randB.current})`, ...elementProps?.style }}>{number}</div>
     )
 }

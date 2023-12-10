@@ -1,5 +1,6 @@
 "use client"
 
+import FlexOverflowScroll from "./flexes/FlexOverflowScroll/FlexOverflowScroll"
 import GridBoxes from "./grids/gridBoxes/GridBoxes"
 import ImageBackground from "./layout components/imageBackground/ImageBackground"
 import TwoColumnHeader from "./layout components/twoColumnHeader/TwoColumnHeader"
@@ -55,8 +56,13 @@ export default function Home() {
           backgroundColor: "red",
         }}>hi there</div>}
         className="noScrollBar">
-        {new Array(20).fill("").map((eachBox, eachBoxIndex) => <ColoredBox key={eachBoxIndex} />)}
+        {new Array(18).fill("").map((eachBox, eachBoxIndex) => <ColoredBox key={eachBoxIndex} number={eachBoxIndex + 1} />)}
       </GridBoxes>
+
+      <p className="signalText">Flex Overflow Scroll</p>
+      <FlexOverflowScroll style={{ padding: "1rem" }} className="noScrollBar">
+        {new Array(18).fill("").map((eachBox, eachBoxIndex) => <ColoredBox key={eachBoxIndex} number={eachBoxIndex + 1} style={{ aspectRatio: "1/1", height: "200px" }} />)}
+      </FlexOverflowScroll>
     </main>
   )
 }
