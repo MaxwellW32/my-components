@@ -77,8 +77,11 @@
 
 
 
+/* dev settings */
 
-
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
 
 .signalText {
   font-weight: bold;

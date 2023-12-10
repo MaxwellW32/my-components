@@ -56,7 +56,6 @@ export default function MainNav1({
 }) {
     const [showingMainMenu, showingMainMenuSet] = useState(false)
 
-    console.log(`$navsize`, navSize);
     return (
         <nav className={`${styles.mainNav} ${(navSize.desktop && styles.desktopMode) ?? ""}    ${(navSize.tablet && styles.tabletMode) ?? ""}  ${(navSize.phone && styles.phoneMode) ?? ""}`}
             style={{

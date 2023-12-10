@@ -1,6 +1,9 @@
 "use client"
-import TwoColumnHeader from "./layouts/twoColumnHeader/TwoColumnHeader";
-import ImageBackground from "./layouts/imageBackground/ImageBackground";
+
+import GridBoxes from "./grids/gridBoxes/GridBoxes"
+import ImageBackground from "./layout components/imageBackground/ImageBackground"
+import TwoColumnHeader from "./layout components/twoColumnHeader/TwoColumnHeader"
+import ColoredBox from "./useful/ColoredBox"
 
 
 export default function Home() {
@@ -44,6 +47,16 @@ export default function Home() {
         <h1 className='RU_largeText' style={{ textAlign: "center" }}>Image Background</h1>
         <h1 className='RU_largeText' style={{ textAlign: "center" }}>Image Background</h1>
       </ImageBackground>
+
+      <p className="signalText">Grid&apos;s</p>
+      <GridBoxes
+        spotlightedEl={<div style={{
+          gridRow: "1/1",
+          backgroundColor: "red",
+        }}>hi there</div>}
+        className="noScrollBar">
+        {new Array(20).fill("").map((eachBox, eachBoxIndex) => <ColoredBox key={eachBoxIndex} />)}
+      </GridBoxes>
     </main>
   )
 }
