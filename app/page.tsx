@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import TwoColumnHeader from "./layouts/twoColumnHeader/TwoColumnHeader";
 import ImageBackground from "./layouts/imageBackground/ImageBackground";
 
@@ -7,14 +6,9 @@ import ImageBackground from "./layouts/imageBackground/ImageBackground";
 export default function Home() {
   return (
     <main style={{}}>
-      <p className="signalText">Two Column Header</p>
+      <p style={{ marginTop: "0rem" }} className="signalText">Two Column Header</p>
       <TwoColumnHeader
         imageOptions={{ alt: "", src: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" }}
-        imageProps={{
-          style: {
-            height: "200px"
-          }
-        }}
         headerEl={<h1 className="RU_largeText">Heading</h1>}
         textEl={<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum, sunt laboriosam illo non laudantium voluptates voluptas dolorem, maxime culpa quisquam, similique ad excepturi commodi. Tenetur rem dolores vel labore.</p>}
       />
@@ -24,10 +18,8 @@ export default function Home() {
         imageOptions={{ alt: "", src: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" }}
         headerEl={<h1 className="RU_largeText">Heading</h1>}
         textEl={<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum, sunt laboriosam illo non laudantium voluptates voluptas dolorem, maxime culpa quisquam, similique ad excepturi commodi. Tenetur rem dolores vel labore.</p>}
-        elementProps={{
-          style: {
-            flexDirection: "row-reverse",
-          }
+        style={{
+          flexDirection: "row-reverse",
         }}
       />
 

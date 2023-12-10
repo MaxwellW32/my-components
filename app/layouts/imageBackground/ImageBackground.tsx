@@ -2,16 +2,14 @@ import { ReactNode } from 'react'
 
 export default function ImageBackground({
     children,
-    elementProps,
     imageProps,
     backdropProps,
-
+    ...elementProps
 }: {
     children: ReactNode,
-    elementProps?: React.HTMLAttributes<HTMLDivElement>,
     imageProps?: React.HTMLAttributes<HTMLDivElement>,
     backdropProps?: React.HTMLAttributes<HTMLDivElement>,
-}) {
+} & React.HTMLAttributes<HTMLDivElement>) {
 
     return (
         <div {...elementProps} style={{ padding: "2rem 1rem", position: "relative", ...elementProps?.style }}>

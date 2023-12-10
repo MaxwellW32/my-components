@@ -1,32 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
-/* import and reuse for all components */
-
-:root {
-  --giant-text: 4rem;
-  --large-text: 3rem;
-  --big-text: 2rem;
-  --medium-text: 1.5rem;
-  --regular-text: 1rem;
-  --small-text: .7rem;
-
-  --mobile-screen: 500px;
-  --tablet-screen-start: 501px;
-  --tablet-screen-end: 1023px;
-  --desktop-screen: 1024px;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red !important; */
 }
 
-body {}
+/* import and reuse for all components */
+:root {
+  --RU_giantText: 4rem;
+  --RU_largeText: 3rem;
+  --RU_bigText: 2rem;
+  --RU_mediumText: 1.5rem;
+  --RU_regularText: 1rem;
+  --RU_smallText: .7rem;
+
+  --RU_mobileScreen: 500px;
+  --RU_tabletScreen-start: 501px;
+  --RU_tabletScreen-end: 1023px;
+  --RU_desktopScreen: 1024px;
+
+  --RU_regularSize: 1rem;
+}
+
 
 /* Reusable component applies the styles */
 /* every component must have class RU on it */
 
 .RU_h1 {
-  font-size: var(--big-text);
+  font-size: var(--RU_bigText);
   font-weight: bold;
 }
 
@@ -40,12 +42,12 @@ body {}
 
 
 .RU_giantText {
-  font-size: var(--giant-text);
+  font-size: var(--RU_giantText);
   font-weight: bold;
 }
 
 .RU_largeText {
-  font-size: var(--large-text);
+  font-size: var(--RU_largeText);
   font-weight: bold;
 }
 
@@ -53,7 +55,7 @@ body {}
 
 .RU_svg {
   aspect-ratio: 1/1;
-  width: var(--regular-size);
+  width: var(--RU_regularTize);
 }
 
 .RU_makeBold {}
@@ -82,14 +84,7 @@ body {}
   font-weight: bold;
   font-size: 1.3rem;
   text-align: center;
-  margin-top: 5rem;
-  padding: .5rem;
+  padding: 2rem .5rem;
   background-color: aliceblue;
   text-transform: capitalize;
-}
-
-*,
-*::before,
-*::after {
-  /* border: 1px solid red !important; */
 }
