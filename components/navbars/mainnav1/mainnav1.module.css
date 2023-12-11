@@ -19,6 +19,8 @@
     text-transform: capitalize;
     z-index: 999;
     font-weight: bold;
+    translate: 0 -100%;
+    transition: translate 1s;
 }
 
 

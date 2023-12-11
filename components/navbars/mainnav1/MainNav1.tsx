@@ -26,7 +26,7 @@ export default function MainNav1({
     themeSwitcherEl,
     mobileNavButtonEl,
     homeButtonEl,
-    navSize = { phone: false, tablet: false, desktop: false },
+    navSize = { phone: true, tablet: false, desktop: false },
     navColors,
     navProps,
     menuProps,
@@ -64,6 +64,7 @@ export default function MainNav1({
                 "--RU_highlightColor": navColors?.highlightColor ?? navColors?.primaryColor ?? "orange",
                 padding: !navSize.desktop ? "1rem" : "",
                 position: !navSize.desktop ? "relative" : "",
+                translate: Object.values(navSize).find(eachVal => eachVal) ? "0 0" : ""
             } as CSSProperties}>
             {homeButtonEl}
 

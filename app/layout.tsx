@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import AtomLoader from './utility/AtomLoader'
-import NavClientWrapper from './utility/NavClientWrapper'
+import AtomLoader from '../utility/AtomLoader'
+import NavClientWrapper from '../utility/NavClientWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 

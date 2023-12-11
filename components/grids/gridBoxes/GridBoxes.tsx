@@ -2,10 +2,12 @@ import { HTMLAttributes, ReactNode, cloneElement, Children } from "react"
 
 export default function GridBoxes({
     children,
+    breakPoint = "200px",
     spotlightedEl,
     ...elementProps
 }: {
     children: ReactNode,
+    breakPoint?: string,
     spotlightedEl?: JSX.Element,
 } & HTMLAttributes<HTMLDivElement>) {
 
@@ -27,7 +29,7 @@ export default function GridBoxes({
     // console.log(`$chil`, children);
 
     return (
-        <div {...elementProps} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(200px, 100%), 1fr))", gridAutoRows: "200px", ...elementProps?.style }}>
+        <div {...elementProps} style={{ display: "grid", gridTemplateColumns: `repeat(auto-fit, minmax(min(${breakPoint}, 100%), 1fr))`, gridAutoRows: "200px", ...elementProps?.style }}>
             {children}
         </div>
     )

@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import MainNav1 from '../navbars/mainnav1/MainNav1'
 import { useAtom } from 'jotai'
 import { screenSizeGlobal } from './globalState'
+import MainNav1 from '@/components/navbars/mainnav1/MainNav1'
 
 export default function NavClientWrapper() {
   const [screenSize] = useAtom(screenSizeGlobal)
