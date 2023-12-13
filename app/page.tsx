@@ -8,6 +8,7 @@ import ImageBackground from "@/components/layouts/imageBackground/ImageBackgroun
 import ImageBackgroundTwoColumn from "@/components/layouts/imageBackgroundTwoColumn/ImageBackgroundTwoColumn"
 import ImageTwoColumn from "@/components/layouts/imageTwoColumn/ImageTwoColumn"
 import ThreePartDisplay from "@/components/layouts/threePartDisplay/ThreePartDisplay"
+import TwoColumn from "@/components/layouts/twoColumn/TwoColumn"
 import TwoColumnHeader from "@/components/layouts/twoColumnHeader/TwoColumnHeader"
 
 import ColoredBox from "@/useful/ColoredBox"
@@ -34,6 +35,14 @@ export default function Home() {
         }}
       />
 
+      <p className="signalText">Two Column</p>
+      <TwoColumn
+        firstEl={<div style={{ backgroundColor: "red", height: "300px" }}>h1
+        </div>}
+        secondEl={<div style={{ backgroundColor: "green", height: "300px" }}>hey</div>}
+      />
+
+
       <p className="signalText">Image Two Column</p>
       <ImageTwoColumn
         imageOptions={{ alt: "", src: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" }}
@@ -42,7 +51,6 @@ export default function Home() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt aliquid magnam cumque, nobis perferendis quis distinctio non vitae ipsam cum voluptatum ea praesentium autem deleniti dolorum exercitationem earum aut!</p>
           </div>}
       />
-
 
       <p className="signalText">Image Background</p>
       <ImageBackground
